@@ -7,7 +7,7 @@
     <version>0.0.1</version>
     <name>neuralccg</name>
     <description>neuralccg</description>
-    <url>https://bitbucket.org/kentonl/neuralccg</url>
+    <url>https://github.com/kentonl/neuralccg</url>
     <properties>
         <jdk.version>1.8</jdk.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
