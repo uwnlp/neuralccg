@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package neuralccg;
+
+import "syntax.proto";
+import "tensor.proto";
+
+option java_package = "edu.uw.neuralccg";
+option java_outer_classname = "TrainProto";
+
+message UpdateProto {
+  repeated int32 correct = 1;
+  repeated int32 incorrect = 2;
+  bool use_crf_loss = 3;
+}
+
+message ScorerConfig {
+  repeated CategoryProto category = 1;
+  repeated string word = 2;
+  ModelProto model = 3;
+  int32 num_layers = 4;
+  uint32 category_dimensions = 5;
+  uint32 word_dimensions = 6;
+  uint32 cell_dimensions = 7;
+  bool score_supertags = 8;
+  bool use_nonterminal_categories = 9;
+  bool couple_gates = 10;
+  bool use_output_gate = 11;
+  double dropout_probability = 12;
+  bool use_compositional_categories = 13;
+  bool use_recursion = 14;
+  bool use_char_lstm = 15;
+}
+
+message RunConfig {
+  uint32 seed = 1;
+  int32 memory = 2;
+}
+
+message WordEmbedding {
+  string word = 1;
+  repeated float value = 2 [packed=true];
+}
+
+message TrainConfig {
+  string update_method = 1;
+  repeated WordEmbedding initial_embedding = 2;
+}
+
+message GatesProto {
+ double score = 1;
+ TensorProto input_gate = 2;
+ TensorProto left_forget_gate = 3;
+ TensorProto right_forget_gate = 4;
+}
+
+message InitialGatesProto {
+ repeated GatesProto forward_gates = 1;
+ repeated GatesProto backward_gates = 2;
+}

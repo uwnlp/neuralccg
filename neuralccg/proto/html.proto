@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package neuralccg;
+
+option java_package = "edu.uw.neuralccg";
+option java_outer_classname = "HtmlProto";
+
+message Html {
+  string content = 1;
+}

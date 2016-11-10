@@ -1,0 +1,6 @@
+bazel-bin
+bazel-genfiles
+bazel-neuralccg
+bazel-out
+bazel-testlogs
+jni/java_home

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package neuralccg;
+
+option java_package = "edu.uw.neuralccg";
+option java_outer_classname = "SerializationProto";
+
+message Serialized {
+  bytes value = 1;
+}
+
+message SerializedList {
+  repeated Serialized serialized = 1;
+}

@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package neuralccg;
+
+import "serialization.proto";
+
+option java_package = "edu.uw.neuralccg";
+option java_outer_classname = "AnalysisProto";
+
+message ParseComparison {
+  EvaluatedParse first = 1;
+  EvaluatedParse second = 2;
+  EvaluatedParse gold = 3;
+  double difference = 4;
+}
+
+message EvaluatedParse {
+  Serialized parse = 1;
+  double f1 = 2;
+}
+
+message EvaluationEvent {
+  string name = 1;
+  int64 timestamp = 2;
+  int64 steps = 3;
+  EvaluationProto eval = 4;
+  EvaluationProto eval_backoff = 5;
+  string checkpoint_path = 6;
+  ParseStatsProto parse_stats = 7;
+}
+
+message EvaluationProto {
+  double recall = 1;
+  double precision = 2;
+  double f1 = 3;
+  double parsable = 4;
+  double speed = 5;
+}
+
+message ParseStatsProto {
+  double neural_score = 1;
+  double neural_queries = 2;
+  double agenda_size = 3;
+  double chart_size = 4;
+  double neural_query_ratio = 5;
+}

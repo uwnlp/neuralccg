@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package neuralccg;
+
+option java_package = "edu.uw.neuralccg";
+option java_outer_classname = "TableProto";
+
+message Table {
+  repeated Row row = 1;
+}
+
+message Row {
+  repeated string cell = 1;
+}

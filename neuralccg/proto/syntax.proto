@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package neuralccg;
+
+option java_package = "edu.uw.neuralccg";
+option java_outer_classname = "SyntaxProto";
+
+message SentenceProto {
+  repeated string word = 1;
+  bool is_eval = 2;
+}
+
+message ChartProto {
+  repeated ParseProto parse = 1;
+}
+
+message ParseProto {
+  CategoryProto category = 1;
+  RuleTypeProto rule_type = 2;
+  repeated int32 child = 3;
+  int32 start = 4;
+  int32 end = 5;
+  string word = 6;
+}
+
+message CategoryProto {
+  SlashProto slash = 1;
+  CategoryProto left = 2;
+  CategoryProto right = 3;
+  string atomic = 4;
+}
+
+enum SlashProto {
+  FWD = 0;
+  BWD = 1;
+  EITHER = 2;
+}
+
+enum RuleTypeProto {
+  FA = 0;
+  BA = 1;
+  FC = 2;
+  BX = 3;
+  GFC = 4;
+  GBX = 5;
+  CONJ = 6;
+  RP = 7;
+  LP = 8;
+  NOISE = 9;
+  FORWARD_TYPERAISE = 10;
+  BACKWARD_TYPE_RAISE = 11;
+  TYPE_CHANGE = 12;
+  LEXICON = 13;
+}
+  
