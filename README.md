@@ -13,6 +13,7 @@ This repository contains the code for replicating results from [Global Neural CC
  * `wget https://github.com/bazelbuild/bazel/releases/download/0.4.0/bazel-0.4.0-installer-linux-x86_64.sh`
  * `chmod +x bazel-0.4.0-installer-linux-x86_64.sh`
  * `./bazel-0.4.0-installer-linux-x86_64.sh --user`
+ * `export PATH=$PATH:~/bin`
  
 ## Setting Up
 * Make user the `JAVA_HOME` environment variable is set correctly, e.g.
