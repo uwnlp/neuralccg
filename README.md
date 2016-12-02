@@ -25,7 +25,7 @@ This repository contains the code for replicating results from [Global Neural CC
 ## Running Experiments
 * The `experiments` directory contains `.conf` files that specify experiments and stages of the experiment.
 * Use `./run.sh <config> <goal> <port>` to run an experiment that launches the specified goal stage and its dependent goal stages.
-* Logs and intermediate results can be tracked via a web browser at the given port, e.g. `localhost:8080`.
+* An experiment summary (e.g. progress, logs, and intermediate results) is hosted locally, and is accessible via a web browser at the given port, e.g. `localhost:8080`.
 
 ### Learning
 * Training: `./run.sh experiments/train.conf train 8080`
@@ -33,3 +33,4 @@ This repository contains the code for replicating results from [Global Neural CC
 
 ### Demo
 * Demo with the released model: `./run.sh experiments/demo.conf demo 8080`
+* Go the experiment summary page to access the demo. 
