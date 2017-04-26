@@ -9,12 +9,11 @@ This repository contains the code for replicating results from [Global Neural CC
  * `sudo apt-get install oracle-java8-installer`
 * Maven
  * `sudo apt-get install maven`
-* Bazel 0.1.4 or above (https://github.com/bazelbuild/bazel/releases)
- * `wget https://github.com/bazelbuild/bazel/releases/download/0.4.0/bazel-0.4.0-installer-linux-x86_64.sh`
- * `chmod +x bazel-0.4.0-installer-linux-x86_64.sh`
- * `./bazel-0.4.0-installer-linux-x86_64.sh --user`
- * `export PATH=$PATH:~/bin`
- 
+* Latest version of Bazel
+ * See installation instructions here: https://bazel.build/versions/master/docs/install-ubuntu.html
+* Latest version of Protobuf
+ * See installation instructions here: https://github.com/google/protobuf/blob/master/src/README.md
+
 ## Setting Up
 * Make user the `JAVA_HOME` environment variable is set correctly, e.g.
  * `export JAVA_HOME=/usr/lib/jvm/java-8-oracle`
@@ -33,4 +32,4 @@ This repository contains the code for replicating results from [Global Neural CC
 
 ### Demo
 * Demo with the released model: `./run.sh experiments/demo.conf demo 8080`
-* Go the experiment summary page to access the demo. 
+* Go the experiment summary page to access the demo.

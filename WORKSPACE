@@ -1,7 +1,7 @@
 git_repository(
     name = "protobuf",
     remote = "https://github.com/google/protobuf.git",
-    commit = "fb714b3606bd663b823f6960a73d052f97283b74",
+    tag = "v3.3.0rc1",
 )
 
 new_git_repository(
@@ -11,16 +11,16 @@ new_git_repository(
     build_file = "gtest.BUILD",
 )
 
-new_git_repository(
+new_http_archive(
     name = "eigen",
-    remote = "https://github.com/RLovelett/eigen.git",
-    commit = "aaaa8c33025952bc8ef8c5c946fe8ab9cf45bf5d",
+    url = "https://github.com/RLovelett/eigen/archive/aaaa8c33025952bc8ef8c5c946fe8ab9cf45bf5d.zip",
+    strip_prefix = "eigen-aaaa8c33025952bc8ef8c5c946fe8ab9cf45bf5d",
     build_file = "eigen.BUILD",
 )
 
 new_git_repository(
     name = "cnn",
-    remote = "https://github.com/clab/cnn.git",
+    remote = "https://github.com/clab/dynet.git",
     commit = "a23940c5dc48aca9e57b287c2b083bf1283ece02",
     build_file = "cnn.BUILD",
 )
