@@ -12,7 +12,7 @@ This repository contains the code for replicating results from [Global Neural CC
 * Latest version of Bazel
   * See installation instructions here: https://bazel.build/versions/master/docs/install-ubuntu.html
 * Boost
-  * sudo apt-get install libboost-all-dev
+  * `sudo apt-get install libboost-all-dev`
   * Note that boost is not directly used, but it is a dependency for legacy reasons.
 
 ## Setting Up
