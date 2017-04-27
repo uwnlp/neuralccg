@@ -4,20 +4,20 @@ This repository contains the code for replicating results from [Global Neural CC
 
 ## Dependencies
 * Java 8
- * `sudo add-apt-repository ppa:webupd8team/java`
- * `sudo apt-get update`
- * `sudo apt-get install oracle-java8-installer`
+  * `sudo add-apt-repository ppa:webupd8team/java`
+  * `sudo apt-get update`
+  * `sudo apt-get install oracle-java8-installer`
 * Maven
- * `sudo apt-get install maven`
+  * `sudo apt-get install maven`
 * Latest version of Bazel
- * See installation instructions here: https://bazel.build/versions/master/docs/install-ubuntu.html
+  * See installation instructions here: https://bazel.build/versions/master/docs/install-ubuntu.html
 * Boost
- * sudo apt-get install libboost-all-dev
- * Note that boost is not directly used, but it is a dependency for legacy reasons.
+  * sudo apt-get install libboost-all-dev
+  * Note that boost is not directly used, but it is a dependency for legacy reasons.
 
 ## Setting Up
 * Make user the `JAVA_HOME` environment variable is set correctly, e.g.
- * `export JAVA_HOME=/usr/lib/jvm/java-8-oracle`
+  * `export JAVA_HOME=/usr/lib/jvm/java-8-oracle`
 * Run `./setup.sh` to download data and compile JNI binaries.
 * Download and extract CCGBank data from https://catalog.ldc.upenn.edu/LDC2005T13.
 * Move the `ccgbank_1_1` directory to the `data` directory.
