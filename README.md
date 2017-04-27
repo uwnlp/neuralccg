@@ -11,8 +11,9 @@ This repository contains the code for replicating results from [Global Neural CC
  * `sudo apt-get install maven`
 * Latest version of Bazel
  * See installation instructions here: https://bazel.build/versions/master/docs/install-ubuntu.html
-* Latest version of Protobuf
- * See installation instructions here: https://github.com/google/protobuf/blob/master/src/README.md
+* Boost
+ * sudo apt-get install libboost-all-dev
+ * Note that boost is not directly used, but it is a dependency for legacy reasons.
 
 ## Setting Up
 * Make user the `JAVA_HOME` environment variable is set correctly, e.g.
